@@ -46,6 +46,7 @@ LuaSettings.workspace.library = {
     "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.8/plugin/library/natives/CFX-NATIVE",
     "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.8/plugin/library/natives/GTAV",
     "/home/dustin/ndrp/[tmc]/core/modules/gta5/client/functions.lua",
+    vim.env.VIMRUNTIME
 }
 LuaSettings.diagnostics.disable = {
     "missing-parameter",
@@ -70,6 +71,12 @@ return {
                 },
             },
             autoformat = false,
+            root_dir = function(fname)
+                local root_pattern = lsp.util.root_pattern('.git', '*.rockspec')(fname)
+
+                if fname == vim.loop.os_homedir() then return nil end
+                return root_pattern or fname
+            end,
         },
     },
 

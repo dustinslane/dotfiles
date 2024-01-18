@@ -42,9 +42,9 @@ LuaSettings.workspace.library = {
     "/home/dustin/ndrp/[tmc]/core/common/functions.lua",
     "/home/dustin/ndrp/[tmc]/core/client/functions.lua",
     "/home/dustin/ndrp/[tmc]/core/server/functions.lua",
-    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.8/plugin/library/runtime",
-    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.8/plugin/library/natives/CFX-NATIVE",
-    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.8/plugin/library/natives/GTAV",
+    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.10/plugin/library/runtime",
+    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.10/plugin/library/natives/CFX-NATIVE",
+    "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.10/plugin/library/natives/GTAV",
     "/home/dustin/ndrp/[tmc]/core/modules/gta5/client/functions.lua",
     vim.env.VIMRUNTIME
 }

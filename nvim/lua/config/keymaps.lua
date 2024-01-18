@@ -6,3 +6,4 @@
 local largs = require('telescope').extensions.live_grep_args;
 
 vim.keymap.set("n", "<leader>sg", largs.live_grep_args, { desc = "GREP (Args)" })
+vim.keymap.set("n", "<F2>", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true})

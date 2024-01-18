@@ -16,10 +16,16 @@ return {
         -- change some options
         opts = {
             defaults = {
+                preview = false,
                 layout_strategy = "horizontal",
                 layout_config = { prompt_position = "top" },
                 sorting_strategy = "ascending",
                 winblend = 0,
+                file_ignore_patterns = {
+                    "pre.cfg",
+                    "resource.cfg",
+                    "server.cfg"
+                },
             },
         },
         dependencies = {
@@ -56,11 +62,24 @@ return {
                         layout_config = { prompt_position = "top" },
                         sorting_strategy = "ascending",
                         winblend = 0,
+                        
 
                         -- ... also accepts theme settings, for example:
                         -- theme = "dropdown", -- use dropdown theme
                         -- theme = { }, -- use own theme spec
                         -- layout_config = { mirror=true }, -- mirror preview pane
+                        preview = false
+
+                    },
+
+                    fzf = {
+                        file_ignore_patterns = {
+                            "pre.cfg",
+                            "resource.cfg",
+                            "server.cfg"
+                        },
+
+                        preview = false
                     }
                 }
             }

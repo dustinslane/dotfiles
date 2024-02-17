@@ -24,11 +24,16 @@ LuaSettings.runtime.nonstandardSymbol = {
     "^=",
     "?.",
 }
+
+LuaSettings.runtime.version = "Lua54"
+
 LuaSettings.workspace = {}
 LuaSettings.workspace.ignoreDir = {
     ".vscode",
     "[map]",
+    "\\[map]\\",
     "[custom]",
+    "\\[custom\\]",
     ".git",
     ".github",
     "node_modules",
@@ -46,7 +51,6 @@ LuaSettings.workspace.library = {
     "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.10/plugin/library/natives/CFX-NATIVE",
     "/home/dustin/.vscode-server/extensions/overextended.cfxlua-vscode-1.7.10/plugin/library/natives/GTAV",
     "/home/dustin/ndrp/[tmc]/core/modules/gta5/client/functions.lua",
-    vim.env.VIMRUNTIME
 }
 LuaSettings.diagnostics.disable = {
     "missing-parameter",
@@ -71,13 +75,13 @@ return {
                 },
             },
             autoformat = false,
-            root_dir = function(fname)
-                local root_pattern = lsp.util.root_pattern('.git', '*.rockspec')(fname)
+    --        root_dir = function(fname)
+    --            local root_pattern = lsp.util.root_pattern('.git', '*.rockspec')(fname)
 
-                if fname == vim.loop.os_homedir() then return nil end
-                return root_pattern or fname
-            end,
-        },
+    --            if fname == vim.loop.os_homedir() then return nil end
+    --            return root_pattern or fname
+    --        end,
+          },
     },
 
     -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,

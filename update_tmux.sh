@@ -3,8 +3,8 @@
 set -e
 
 # dependecies
-apt update
-apt install -y git automake build-essential pkg-config libevent-dev libncurses5-dev byacc
+sudo apt update
+sudo apt install -y git automake build-essential pkg-config libevent-dev libncurses5-dev byacc
 
 # where our temp file locates
 rm -rf /tmp/tmux
@@ -13,7 +13,7 @@ cd /tmp/tmux
 
 bash autogen.sh
 ./configure && make
-make install
+sudo make install
 cd -
 
 # clean up

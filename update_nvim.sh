@@ -1,7 +1,5 @@
 #!/bin/sh
 sudo apt update
-sudo apt upgrade -y
-
 sudo apt install build-essential git make cmake ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen fzf -y
 
 

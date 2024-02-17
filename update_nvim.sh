@@ -4,7 +4,7 @@ sudo apt upgrade -y
 
 sudo apt install build-essential git make cmake ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen fzf -y
 
-$wd = pwd
+
 rm -rf /tmp/nvim_install
 mkdir /tmp/nvim_install
 cd /tmp/nvim_install
@@ -25,4 +25,4 @@ cmake --build build
 sudo cmake --install build --prefix /usr
 
 echo "ALL DONE"
-cd $wd
+rm -rf /tmp/nvim_install

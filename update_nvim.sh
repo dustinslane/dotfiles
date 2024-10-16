@@ -14,7 +14,7 @@ git fetch --tags
 
 # Checkout latest tag
 echo "checking out nightly tag"
-git checkout tags/nightly
+git checkout tags/v0.10.2
 
 cmake -S cmake.deps -B .deps -G Ninja -D CMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build .deps
@@ -23,4 +23,4 @@ cmake --build build
 sudo cmake --install build --prefix /usr
 
 echo "ALL DONE"
-rm -rf /tmp/nvim_install
+# rm -rf /tmp/nvim_install

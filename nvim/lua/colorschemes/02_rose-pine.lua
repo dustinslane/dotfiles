@@ -72,5 +72,3 @@ require("rose-pine").setup({
 		-- end
 	end,
 })
-
-

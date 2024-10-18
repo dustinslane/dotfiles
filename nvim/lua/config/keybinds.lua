@@ -75,3 +75,8 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
+
+
+map( "n", "gI", [[ <cmd>lua require("telescope.builtin").lsp_implementations({ reuse_win = true })<CR>]], {desc = "Goto Implementation"})
+map( "n", "gr", "<cmd>Telescope lsp_references<cr>", {desc = "Goto Implementation", nowait = true})
+map( "n", "gd", [[ <cmd>lua require("telescope.builtin").lsp_definitions({ reuse_win = true })<CR>]], {desc = "Goto Definition"})

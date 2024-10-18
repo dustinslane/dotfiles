@@ -1,4 +1,4 @@
-require('bufdel').setup({
+require("bufdel").setup({
 	next = "tabs",
-	quit = false
+	quit = false,
 })

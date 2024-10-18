@@ -1,8 +1,7 @@
 return {
-	'nvim-lualine/lualine.nvim',
-	dependencies =
-	{
-		'nvim-tree/nvim-web-devicons',
+	"nvim-lualine/lualine.nvim",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
 
 		-- A performant lsp progress status for Neovim.
 		{
@@ -10,8 +9,7 @@ return {
 			config = true,
 			-- dev = true,
 			-- dir = "~/github/linrongbin16/lsp-progress.nvim",
-		}
-
+		},
 	},
 
 	config = function(_, opts)
@@ -55,7 +53,7 @@ return {
 					function()
 						return require("lsp-progress").progress({
 							format = function(messages)
-								local active_clients =	vim.lsp.get_active_clients()
+								local active_clients = vim.lsp.get_active_clients()
 								if #messages > 0 then
 									return table.concat(messages, " ")
 								end
@@ -63,7 +61,7 @@ return {
 								local client_names = {}
 								for _, client in ipairs(active_clients) do
 									if client and client.name ~= "" then
-										table.insert(client_names,	1,	client.name)
+										table.insert(client_names, 1, client.name)
 									end
 								end
 								return table.concat(client_names, "  ")
@@ -71,7 +69,7 @@ return {
 						})
 					end,
 				},
---				"diagnostics",
+				--				"diagnostics",
 			},
 			lualine_y = { "filetype", "encoding", "fileformat" },
 			lualine_z = { "location" },

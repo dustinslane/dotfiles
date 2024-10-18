@@ -26,17 +26,12 @@ local stuff = {
 	end,
 
 	settings = {
-		Lua = {}
+		Lua = {
+		-- 	format = {
+		-- 		enable = true
+		-- 	}
+		}
 	},
-
-	commands = {
-      Format = {
-        function()
-          require("stylua-nvim").format_file()
-        end,
-      },
-	}
 }
 
 lspconfig.lua_ls.setup(stuff)
-
